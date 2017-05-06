@@ -63,6 +63,14 @@ def lireDescription():
     return labyrinthe
 
 
+def lireFichier(fic):
+    labyrinthe = []
+    lignes = [line.rstrip('\n') for line in open(fic)]
+    for l in lignes:
+        labyrinthe.append(decodeLigne(l))
+    return labyrinthe
+
+
 def main():
     labyrinthe = lireDescription()
     print(labyrinthe)
