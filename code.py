@@ -32,6 +32,7 @@ def creerLabyrinthe(m,n):
         labyrinthe.append(liste)
     return labyrinthe
 
+
 def main():
     labyrinthe=creerLabyrinthe(1,1)
     print(labyrinthe)
