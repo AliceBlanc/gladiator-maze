@@ -1,3 +1,6 @@
+import sys
+
+
 def creerCase(mur, passage, sortie, joueur, gladiateur):
     case = {"mur": mur, "passage": passage, "sortie": sortie, "joueur": joueur, "gladiateur": gladiateur}
     return case
@@ -71,9 +74,28 @@ def lireFichier(fic):
     return labyrinthe
 
 
+def afficherLabyrinthe(lab):
+    for lignes in lab:
+        for case in lignes:
+            if case['mur']:
+                sys.stdout.write(unichr(9608))
+            elif case['passage']:
+                sys.stdout.write(unichr(9617))
+            elif case['sortie']:
+                sys.stdout.write(unichr(9617))
+            elif case['joueur']:
+                sys.stdout.write(unichr(9786))
+            elif case['gladiateur']:
+                sys.stdout.write(unichr(9937))
+            else:
+                sys.stdout.write(' ')
+        sys.stdout.write("\n")
+
+
 def main():
-    labyrinthe = lireDescription()
-    print(labyrinthe)
+    print('Lab : ', sys.argv[1])
+    labyrinthe = lireFichier(sys.argv[1])
+    afficherLabyrinthe(labyrinthe)
 
 
 main()
