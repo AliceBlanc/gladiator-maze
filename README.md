@@ -1,9 +1,11 @@
 # gladiator-maze
 
 Utiliser
-```
-python3 code.py lab12.txt
+
 ```Bash
+python3 code.py lab12.txt
+```
+
 pour afficher le labyrinthe 12.
 
 Tous les labyrinthes sont codés, mais à vérifier.
