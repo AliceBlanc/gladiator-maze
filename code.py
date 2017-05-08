@@ -78,15 +78,15 @@ def afficherLabyrinthe(lab):
     for lignes in lab:
         for case in lignes:
             if case['mur']:
-                sys.stdout.write(unichr(9608))
+                sys.stdout.write(chr(9608))
             elif case['passage']:
-                sys.stdout.write(unichr(9617))
+                sys.stdout.write(chr(9617))
             elif case['sortie']:
-                sys.stdout.write(unichr(9617))
+                sys.stdout.write(chr(9617))
             elif case['joueur']:
-                sys.stdout.write(unichr(9786))
+                sys.stdout.write(chr(9786))
             elif case['gladiateur']:
-                sys.stdout.write(unichr(9937))
+                sys.stdout.write(chr(9937))
             else:
                 sys.stdout.write(' ')
         sys.stdout.write("\n")
